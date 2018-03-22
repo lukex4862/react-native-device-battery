@@ -14,19 +14,17 @@ import java.util.Collections;
 import java.util.List;
 
 public class DeviceBatteryPackage implements ReactPackage {
-  @Override
+
   public List<NativeModule> createNativeModules(ReactApplicationContext reactApplicationContext) {
     List<NativeModule> modules = new ArrayList<NativeModule>();
     modules.add(new DeviceBatteryModule(reactApplicationContext));
     return modules;
   }
 
-  @Override
   public List<Class<? extends JavaScriptModule>> createJSModules() {
     return Collections.emptyList();
   }
 
-  @Override
   public List<ViewManager> createViewManagers(ReactApplicationContext reactApplicationContext) {
     return Arrays.<ViewManager>asList();
   }
